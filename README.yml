@@ -130,6 +130,7 @@ features:
           ```
 important_notes: |
   - **⚠️ Recreate Existing Queue:** Recreates the existing queue if the queue type is changed - set `fifo_queue = true`
+  - **⚠️ FIFO Queue Compatibility:** When using SQS FIFO queues, the SNS topic must also be configured for FIFO compatibility
 input_table: |
   | content_based_deduplication | Enables content-based deduplication for FIFO queues | `bool` | `false` | no |
   | deduplication_scope | Specifies whether message deduplication occurs at the message group or queue level. | `string` | `null` | no |

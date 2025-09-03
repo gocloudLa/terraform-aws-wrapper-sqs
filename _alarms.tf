@@ -1,4 +1,4 @@
-# //alerta si se estan encolando peticiones y se esta llegando al limite
+# //alert if requests are being queued and the limit is being reached
 # module "sqs_inflight_limit_alarm" {
 #   for_each = var.sqs_parameters
 #   source   = "terraform-aws-modules/cloudwatch/aws//modules/metric-alarm"
@@ -13,7 +13,7 @@
 #   unit                = "Count"
 #   metric_name         = "ApproximateNumberOfMessagesNotVisible"
 #   namespace           = "AWS/SQS"
-#   period              = try(each.value.alarms_parameters["inflight-message-limit"].period, 300) //5minutos
+#   period              = try(each.value.alarms_parameters["inflight-message-limit"].period, 300) //5 minutes
 #   statistic           = "Maximum"
 #   actions_enabled     = true
 #   datapoints_to_alarm = null
@@ -32,7 +32,7 @@
 
 # }
 
-# #si cantidad de mensajes enviados esta abajo de valores habituales
+# #if the number of messages sent is below usual values
 # module "sqs_alarm_number_messages_sent" {
 #   for_each = var.sqs_parameters
 #   source   = "terraform-aws-modules/cloudwatch/aws//modules/metric-alarm"
@@ -65,7 +65,7 @@
 #   tags                                  = local.common_tags
 # }
 
-# #indica si hay mensajes que estan tardando mas tiempo de lo normal en ser procesados
+# #indicates if there are messages that are taking longer than usual to be processed
 # module "sqs_alarm_age_oldest_message" {
 #   for_each = var.sqs_parameters
 #   source   = "terraform-aws-modules/cloudwatch/aws//modules/metric-alarm"
