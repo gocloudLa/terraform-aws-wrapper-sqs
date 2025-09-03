@@ -213,6 +213,7 @@ sqs_parameters = {
 
 ## ⚠️ Important Notes
 - **⚠️ Recreate Existing Queue:** Recreates the existing queue if the queue type is changed - set `fifo_queue = true`
+- **⚠️ FIFO Queue Compatibility:** When using SQS FIFO queues, the SNS topic must also be configured for FIFO compatibility
 
 
 
