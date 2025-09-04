@@ -2,7 +2,6 @@ module "sqs" {
   source = "../../"
 
   metadata = local.metadata
-  project  = local.project
 
   sqs_parameters = {
     "example" = {
