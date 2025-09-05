@@ -1,0 +1,7 @@
+title: "Complete Example"
+description: "This example demonstrates a comprehensive setup of an SQS module using Terraform, including queue creation, policy management, and FIFO queue configuration."
+main_purpose: "The main purpose is to configure and manage Amazon SQS queues with various settings and policies."
+key_features:
+  - "**Example Queue**: Demonstrates the creation of an SQS queue with default parameters."
+  - "**Example Policy**: Shows how to create a policy for an SQS queue allowing SNS to send messages."
+  - "**Fifo Queue**: Illustrates the setup of a FIFO (First-In-First-Out) queue for ordered message processing."
