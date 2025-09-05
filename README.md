@@ -204,6 +204,7 @@ sqs_parameters = {
 | source_dlq_queue_policy_documents     | List of IAM policy documents that are merged together into the exported document. Statements must have unique sids                                                                                                                  | `any`    | `[]`                                      | no       |
 | override_dlq_queue_policy_documents   | List of IAM policy documents that are merged together into the exported document. In merging, statements with non-blank sids will override statements with the same sid                                                             | `any`    | `[]`                                      | no       |
 | dlq_queue_policy_statements           | A map of IAM policy statements for custom permission usage                                                                                                                                                                          | `any`    | `{}`                                      | no       |
+| tags                                  | A map of tags to assign to resources.                                                                                                                                                                                               | `map`    | `{}`                                      | no       |
 
 
 
