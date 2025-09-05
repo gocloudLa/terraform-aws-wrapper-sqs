@@ -20,7 +20,6 @@ module "sqs" {
   redrive_allow_policy              = try(each.value.redrive_allow_policy, var.sqs_defaults.redrive_allow_policy, {})
   redrive_policy                    = try(each.value.redrive_policy, var.sqs_defaults.redrive_policy, {})
   sqs_managed_sse_enabled           = try(each.value.sqs_managed_sse_enabled, var.sqs_defaults.sqs_managed_sse_enabled, true)
-  tags                              = local.common_tags
 
   # Queue policy
   create_queue_policy             = try(each.value.create_queue_policy, var.sqs_defaults.create_queue_policy, false)
@@ -50,4 +49,6 @@ module "sqs" {
   source_dlq_queue_policy_documents   = try(each.value.source_dlq_queue_policy_documents, var.sqs_defaults.source_dlq_queue_policy_documents, [])
   override_dlq_queue_policy_documents = try(each.value.override_dlq_queue_policy_documents, var.sqs_defaults.override_dlq_queue_policy_documents, [])
   dlq_queue_policy_statements         = try(each.value.dlq_queue_policy_statements, var.sqs_defaults.dlq_queue_policy_statements, {})
+
+  tags = merge(local.common_tags, try(each.value.tags, var.sqs_defaults.tags, null))
 }
