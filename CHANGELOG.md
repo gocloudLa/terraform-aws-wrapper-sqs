@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/gocloudLa/terraform-aws-wrapper-sqs/compare/v1.0.0...v1.0.1) (2025-10-11)
+
+
+### Bug Fixes
+
+* **versions:** remove unused random ([#3](https://github.com/gocloudLa/terraform-aws-wrapper-sqs/issues/3)) ([6d7340b](https://github.com/gocloudLa/terraform-aws-wrapper-sqs/commit/6d7340bdcca37983985becc449a13adac3853f89))
+
 ## 1.0.0 (2025-09-05)
 
 
