@@ -1,7 +1,7 @@
 module "sqs" {
   for_each = var.sqs_parameters
   source   = "terraform-aws-modules/sqs/aws"
-  version  = "5.0.0"
+  version  = "5.1.0"
 
   name                        = "${local.common_name}-${each.key}"
   content_based_deduplication = try(each.value.content_based_deduplication, var.sqs_defaults.content_based_deduplication, false)
