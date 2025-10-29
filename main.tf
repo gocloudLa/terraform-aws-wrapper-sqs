@@ -4,6 +4,7 @@ module "sqs" {
   version  = "5.1.0"
 
   name                        = "${local.common_name}-${each.key}"
+  region                      = try(each.value.region, var.sqs_defaults.region,null) 
   content_based_deduplication = try(each.value.content_based_deduplication, var.sqs_defaults.content_based_deduplication, false)
   deduplication_scope         = try(each.value.deduplication_scope, var.sqs_defaults.deduplication_scope, null)
   delay_seconds               = try(each.value.delay_seconds, var.sqs_defaults.delay_seconds, "0")
