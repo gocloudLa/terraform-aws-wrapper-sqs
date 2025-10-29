@@ -23,7 +23,7 @@ The Terraform wrapper for SQS simplifies the configuration of the Queue Service 
 ### 🔗 External Modules
 | Name | Version |
 |------|------:|
-| <a href="https://github.com/terraform-aws-modules/terraform-aws-sqs" target="_blank">terraform-aws-modules/sqs/aws</a> | 5.0.0 |
+| <a href="https://github.com/terraform-aws-modules/terraform-aws-sqs" target="_blank">terraform-aws-modules/sqs/aws</a> | 5.1.0 |
 
 
 
@@ -205,6 +205,7 @@ sqs_parameters = {
 | override_dlq_queue_policy_documents   | List of IAM policy documents that are merged together into the exported document. In merging, statements with non-blank sids will override statements with the same sid                                                             | `any`    | `[]`                                      | no       |
 | dlq_queue_policy_statements           | A map of IAM policy statements for custom permission usage                                                                                                                                                                          | `any`    | `{}`                                      | no       |
 | tags                                  | A map of tags to assign to resources.                                                                                                                                                                                               | `map`    | `{}`                                      | no       |
+| region                                | Region where the resource(s) will be managed. Defaults to the Region set in the provider configuration                                                                                                                              | `string` | `null`                                    | no       |
 
 
 
