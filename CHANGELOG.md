@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/gocloudLa/terraform-aws-wrapper-sqs/compare/v1.0.1...v1.0.2) (2025-11-25)
+
+
+### Bug Fixes
+
+* **deps:** bump terraform-aws-modules/sqs/aws from 5.0.0 to 5.1.0 in the all-terraform-dependencies group across 1 directory ([#5](https://github.com/gocloudLa/terraform-aws-wrapper-sqs/issues/5)) ([eb3edb7](https://github.com/gocloudLa/terraform-aws-wrapper-sqs/commit/eb3edb795efd30ddefe6bcd670887edbb54b57c6))
+
 ## [1.0.1](https://github.com/gocloudLa/terraform-aws-wrapper-sqs/compare/v1.0.0...v1.0.1) (2025-10-11)
 
 
