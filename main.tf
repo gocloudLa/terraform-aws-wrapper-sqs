@@ -1,7 +1,7 @@
 module "sqs" {
   for_each = var.sqs_parameters
   source   = "terraform-aws-modules/sqs/aws"
-  version  = "5.1.0"
+  version  = "5.2.0"
 
   name                        = "${local.common_name}-${each.key}"
   region                      = try(each.value.region, var.sqs_defaults.region, null)
