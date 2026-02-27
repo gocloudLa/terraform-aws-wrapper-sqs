@@ -23,7 +23,7 @@ The Terraform wrapper for SQS simplifies the configuration of the Queue Service 
 ### 🔗 External Modules
 | Name | Version |
 |------|------:|
-| <a href="https://github.com/terraform-aws-modules/terraform-aws-sqs" target="_blank">terraform-aws-modules/sqs/aws</a> | 5.1.0 |
+| <a href="https://github.com/terraform-aws-modules/terraform-aws-sqs" target="_blank">terraform-aws-modules/sqs/aws</a> | 5.2.1 |
 
 
 
